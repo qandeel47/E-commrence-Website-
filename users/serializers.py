@@ -3,9 +3,6 @@ from .models import CustomUser
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 
-# -------------------------
-# REGISTER SERIALIZER
-# -------------------------
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
 
@@ -30,9 +27,6 @@ class RegisterSerializer(serializers.ModelSerializer):
         return user
 
 
-# -------------------------
-# CUSTOM JWT LOGIN SERIALIZER
-# -------------------------
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
     @classmethod
